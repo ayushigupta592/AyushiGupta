@@ -1,0 +1,31 @@
+
+<html>
+<head>
+  <link rel="stylesheet" href="loginstyle.css">
+  <script type="text/javascript"> 
+  function validate(){
+  if(document.FixedDepositeDemo.uname.value==""||document.FixedDepositeDemo.psw.value==""){
+  alert("all fields are mandatory");
+  }
+  }
+  </script>
+</head>
+<body>
+<form action="action_page.php" name="FixedDepositeDemo">
+
+  <div class="imgcontainer">
+    <img src="a.jpg" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label><b>Amount : </b></label>
+    <input type="text" placeholder="Enter Amount" name="amt" onblur="validate()"><br>
+
+    <label><b>tenure : </b></label>
+    <input type="number" placeholder="enter number of years" name="tenure" onblur="validate()"><br>
+
+    <button type="submit">See maturity amount</button>
+  </div>
+</form>
+</body>
+</html>
