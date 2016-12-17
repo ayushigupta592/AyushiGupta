@@ -1,9 +1,16 @@
 <html>
 <head>
   <link rel="stylesheet" href="loginstyle.css">
+  <script type="text/javascript"> 
+  function validate(){
+  if(document.login.uname.value=""||document.login.psw.value=""){
+  alert("all fields are mandatory");
+  }
+  }
+  </script>
 </head>
 <body>
-<form action="action_page.php">
+<form action="action_page.php" name="login">
 
   <div class="imgcontainer">
     <img src="a.jpg" alt="Avatar" class="avatar">
@@ -11,10 +18,10 @@
 
   <div class="container">
     <label><b>Username : </b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required><br>
+    <input type="text" placeholder="Enter Username" name="uname" required onblur="validate()"><br>
 
     <label><b>Password : </b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required><br>
+    <input type="password" placeholder="Enter Password" name="psw" required onblur="validate()"><br>
 
     <button type="submit">Login</button>
   </div>
