@@ -1,0 +1,30 @@
+<html>
+<head>
+  <link rel="stylesheet" href="loginstyle.css">
+  <script type="text/javascript"> 
+  function validate(){
+  if(document.FinalFundTransfer.uname.value==""||document.FinalFundTransfer.psw.value==""){
+  alert("all fields are mandatory");
+  }
+  }
+  </script>
+</head>
+<body>
+<form action="action_page.php" name="FinalFundTransfer">
+
+  <div class="imgcontainer">
+    <img src="a.jpg" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label><b>Amount : </b></label>
+    <input type="text" placeholder="Enter Amount" name="amt" onblur="validate()"><br>
+
+    <label><b>Beneficiary Name : </b></label>
+    <input type="text" placeholder="Enter Beneficiary Name" name="bname" onblur="validate()"><br>
+
+    <button type="submit">Login</button>
+  </div>
+</form>
+</body>
+</html>
