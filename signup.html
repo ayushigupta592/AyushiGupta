@@ -1,0 +1,33 @@
+<html>
+<head>
+  <link rel="stylesheet" href="loginstyle.css">
+  <script type="text/javascript"> 
+  function check(){
+  if(document.signup.pass.value!=document.login.cpass.value){
+  alert("Password entered do not match");
+  }
+  }
+  </script>
+</head>
+<body>
+<form action="action_page.php" name="signup">
+
+  <div class="imgcontainer">
+    <img src="a.jpg" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+  <table align="center">
+    <tr><td>Name :</td><td><input type="text" name="custname" placeholder="Enter Username"  ></td></tr>
+    <tr><td>Customer ID:</td><td><input type="text" name="cid"  placeholder="Enter your customer id"></td></tr>
+    <tr><td>Account number :</td><td><input type="text" name="accno"  placeholder="Enter your account number" ></td></tr>
+    <tr><td>Mobile Number:</td><td><input type="text" name="mobno"  placeholder="Enter your mobile number" ></td></tr>
+    <tr><td>Create password:</td><td><input type="text" name="pass"  placeholder="Enter your password" ></td></tr>
+    <tr><td>Confirm Password:</td><td><input type="password" placeholder="Confirm Password" name="cpass" onblur="check()"></td></tr>
+ </table>
+    <button type="submit">Login</button>
+   
+  </div>
+</form>
+</body>
+</html>
